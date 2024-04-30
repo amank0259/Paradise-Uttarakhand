@@ -6,10 +6,12 @@ import About from './Components/About';
 import Destination from './Components/Destination';
 import Tour from './Components/Tour';
 import Contact from './Components/Contact';
+import Topbar from './Components/Topbar';
 
 function App() {
   return (
     <Router>
+      <Topbar />
       <Navbar />
       <div className='container'>
         <Routes>
