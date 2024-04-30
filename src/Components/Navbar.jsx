@@ -5,7 +5,6 @@ import { FaTimes, FaBars } from 'react-icons/fa';
 
 function Navbar() {
     const [nav, setNav] = useState(false);
-    const [isActive, setIsActive] = useState(false);
     const menu = [
         {
             id: 1,
@@ -36,7 +35,7 @@ function Navbar() {
     ];
     return (
         <>
-            <div className='bg-zinc-200 text-black h-20 flex items-center justify-between md:px-32 lg:48 px-10'>
+            <div className='bg-zinc-200 text-black h-20 flex items-center justify-between md:px-32 lg:48 px-10 absolute w-full top-10 left-0'>
                 <Link to="/"><img className='rounded-xl cursor-pointer' src={logo} height={60} width={60} alt="paradise_uttarakhand logo" /></Link>
 
                 <ul className='md:flex sm:gap-10 gap-4 hidden text-xl font-semibold'>
