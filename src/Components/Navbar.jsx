@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '/logo.png';
+import logo from '/logo_invert.png';
 import { FaTimes, FaBars } from 'react-icons/fa';
 
 function Navbar() {
@@ -35,9 +35,8 @@ function Navbar() {
     ];
     return (
         <>
-            <div className='bg-zinc-200 text-black h-20 flex items-center justify-between md:px-32 lg:48 px-10 absolute w-full top-10 left-0'>
-                <Link to="/"><img className='rounded-xl cursor-pointer' src={logo} height={60} width={60} alt="paradise_uttarakhand logo" /></Link>
-
+            <div className=' text-black bg-zinc-500 h-20 flex shadow-md items-center justify-between md:px-32 lg:48 px-10 absolute w-full top-10 left-0 border-b border-zinc-700 border-opacity-75'>
+                <Link to="/"><img className='rounded-xl cursor-pointer' src={logo} width={95} alt="paradise_uttarakhand logo" /></Link>
                 <ul className='md:flex sm:gap-10 gap-4 hidden text-xl font-semibold'>
                     {menu.map((item, index) => (
                         <li key={index}><Link className={`hover:border-b-4 hover:border-yellow-500 delay-100 cursor-pointer hover:scale-150`} to={item.path}>{item.name}</Link></li>

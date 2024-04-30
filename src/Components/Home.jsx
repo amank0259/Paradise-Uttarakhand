@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import Background from './Background';
+import Navbar from './Navbar';
+import Topbar from './Topbar';
+
 
 function Home() {
     return (
-        <div>Home</div>
-    )
+        <>
+            <Background />
+            <Topbar />
+            <Navbar />
+        </>
+    );
 }
 
-export default Home
+export default Home;
