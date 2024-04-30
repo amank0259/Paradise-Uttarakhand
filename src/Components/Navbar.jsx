@@ -39,7 +39,7 @@ function Navbar() {
                 <Link to="/"><img className='rounded-xl cursor-pointer' src={logo} width={95} alt="paradise_uttarakhand logo" /></Link>
                 <ul className='md:flex sm:gap-10 gap-4 hidden text-xl font-semibold'>
                     {menu.map((item, index) => (
-                        <li key={index}><Link className={`hover:border-b-4 hover:border-yellow-500 delay-100 cursor-pointer hover:scale-150`} to={item.path}>{item.name}</Link></li>
+                        <li key={index}><Link className={`hover:border-b-4 hover:border-yellow-500 duration-200 cursor-pointer hover:scale-150`} to={item.path}>{item.name}</Link></li>
                     ))}
                 </ul>
 
