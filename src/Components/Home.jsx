@@ -13,7 +13,7 @@ function Home() {
             }} className='w-full h-[80vh] flex flex-col justify-end items-start p-10'>
             </div>
             {/* background image content */}
-            <div className='w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
+            <div className='w-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center md:mx-10'>
                 <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
                 <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold'>with PARADISE UTTARAKHAND</h1>
                 <button className='md:px-6 md:py-3 px-4 py-2 duration-200 bg-yellow-500 rounded-md text-white text-md md:text-xl m-4 hover:bg-yellow-600'>View TOURS</button>
