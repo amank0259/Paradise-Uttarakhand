@@ -1,6 +1,7 @@
 import React from 'react';
 import cover from '/cover1.jpg'
 import TopDestinations from './TopDestinations';
+import Banner from './Banner';
 
 function Home() {
     return (
@@ -29,6 +30,12 @@ function Home() {
 
                 <p className='px-10 md:px-48 py-2 leading-6 tracking-wide text-lg md:block hidden'>Uttarakhand is north indian state of India. Previously part of Uttarpradesh. In year 2000 it became the 27the state of India. Uttarakhand state has 13 districts and divided in two divisions known as Garhwal and Kumaoun. Garhwali and Kumaouni is also two major local languages in Uttarakhand areas after Hindi. It has population of more than 10 mln and area of more than 50,000 square kms. Tourism and Agriculture is biggest industries in Uttarakhand. Dehradun is capital of Uttarakhand state and also major Airport in the state. Religious Tourism is biggest tourism in the state with many ancient hindu temples are located in the state. Haridwar, Mussoorie, Nainital, Chardham, Corbett, Rishikesh etc are some of the leading tourist destinations among the 50 + other destinations for tourist. Uttarakhand has some of the highest mountains peak of Indian Himalayas and famous rivers like Yamuna and Ganga starts here.</p>
             </div> */}
+
+
+            {/* Banner Component */}
+            <div>
+                <Banner />
+            </div>
 
             {/* Top Destinations Card */}
             <div>
