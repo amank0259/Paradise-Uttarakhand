@@ -34,7 +34,7 @@ function Banner() {
             <Slider {...settings}>
                 {banners.map((banner, index) => (
                     <div key={index}>
-                        <img className='rounded' src={banner.imageUrl} alt={banner.altText} />
+                        <img className='rounded cursor-pointer' src={banner.imageUrl} alt={banner.altText} />
                     </div>
                 ))}
             </Slider>

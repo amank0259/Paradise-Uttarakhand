@@ -2,8 +2,16 @@ import React from 'react';
 import cover from '/cover1.jpg'
 import TopDestinations from './TopDestinations';
 import Banner from './Banner';
+import Button from './UI/Button';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+    const navigate = useNavigate();
+
+    const handleMoreDestinationsClick = () => {
+        navigate('/destinations');
+    };
+
     return (
         <>
             {/* Background image */}
@@ -17,8 +25,8 @@ function Home() {
             {/* background image content */}
             <div className='w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
                 <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
-                <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold'>with PARADISE UTTARAKHAND</h1>
-                <button className='md:px-6 md:py-3 px-4 py-2 duration-200 bg-yellow-500 rounded-md text-white text-md md:text-xl m-4 hover:bg-yellow-600'>View TOURS</button>
+                <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold mb-4'>with PARADISE UTTARAKHAND</h1>
+                <Button text="View Tour" />
             </div>
             {/* About Paradise Uttarakhand
             <div className='Home_about flex flex-col items-center justify-center bg-zinc-200'>
@@ -38,8 +46,9 @@ function Home() {
             </div>
 
             {/* Top Destinations Card */}
-            <div>
+            <div className='flex items-center justify-center flex-col'>
                 <TopDestinations />
+                <Button onClick={handleMoreDestinationsClick} className="py-0" text="More Destinations" />
             </div>
         </>
     );
