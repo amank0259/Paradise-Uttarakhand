@@ -21,6 +21,7 @@ const ScrollReveal = ({ children, variant = 'fromUp', delay = 0 }) => {
             initial={variants[variant].initial}
             animate={inView ? variants[variant].animate : {}}
             transition={{ duration: 0.5, ease: 'easeOut', delay }}
+            className="w-full h-full"       // Ensure full width and height
         >
             {children}
         </motion.div>
