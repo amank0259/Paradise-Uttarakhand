@@ -18,7 +18,7 @@ function Booking() {
             <ScrollReveal variant='fromUp' delay={0.3} >
                 <div className='px-10 md:px-48 lg:px-64 py-4 md:py-8 flex items-center flex-col'>
                     <h3 className='text-center font-semibold'>Booking Open Now</h3>
-                    <h3 className='text-center font-semibold uppercase tracking-tighter bg-gradient-to-r from-blue-100 via-yellow-100 to-green-100 text-xl md:text-3xl inline-block px-4 rounded'>{`Chardham Yatra ${currentYear}`}</h3>
+                    <h3 className='text-center font-semibold uppercase tracking-tighter bg-gradient-to-r from-blue-100 via-yellow-100 to-green-100 text-xl md:text-3xl inline-block px-4 py-1 mt-2 rounded'>{`Chardham Yatra ${currentYear}`}</h3>
                 </div>
             </ScrollReveal>
             <div className='px-10 md:px-48 lg:px-64 py-4 md:py-8 flex flex-col md:flex-row items-center justify-center'>
