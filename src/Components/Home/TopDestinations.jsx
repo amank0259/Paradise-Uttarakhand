@@ -1,12 +1,12 @@
 import React from 'react';
-import TopDestinationCard from './TopDestinationCard';
+import TopDestinationCard from '../Home/TopDestinationCard';
 import badrinath from '/badrinath.jpg';
 import kedarnath from '/kedarnath.jpg';
 import auli from '/Auli.jpg';
 import gangotri from '/gangotri.jpg';
 import mussoorie from '/mussoorie.jpg';
 import chopta from '/chopta.jpg';
-import ScrollReveal from './UI/ScrollReveal';
+import ScrollReveal from '../UI/ScrollReveal';
 
 function TopDestinations() {
     // add the all data into a single string

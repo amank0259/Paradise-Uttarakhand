@@ -2,9 +2,11 @@ import React from 'react';
 import cover from '/cover1.jpg'
 import TopDestinations from './TopDestinations';
 import Banner from './Banner';
-import Button from './UI/Button';
+import Button from '../UI/Button';
 import { useNavigate } from 'react-router-dom';
-import ScrollReveal from './UI/ScrollReveal';
+import ScrollReveal from '../UI/ScrollReveal';
+import Booking from './Booking';
+import PopularTour from './PopularTour';
 
 function Home() {
     const navigate = useNavigate();
@@ -19,7 +21,7 @@ function Home() {
     return (
         <>
             {/* Background image */}
-            <ScrollReveal variant='fromUp' delay={0.5}>
+            <ScrollReveal variant='fromUp' delay={0.3}>
                 <div style={{
                     background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(${cover})`,
                     backgroundPosition: "center",
@@ -29,11 +31,13 @@ function Home() {
                 </div>
             </ScrollReveal>
             {/* background image content */}
-            <div className='w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
-                <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
-                <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold mb-4'>with PARADISE UTTARAKHAND</h1>
-                <Button text="View Tour" onClick={handleViewTourClick} />
-            </div>
+            <ScrollReveal variant='fromUp' delay={0.4}>
+                <div className='w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
+                    <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
+                    <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold mb-4'>with PARADISE UTTARAKHAND</h1>
+                    <Button text="View Tour" onClick={handleViewTourClick} />
+                </div>
+            </ScrollReveal >
             {/* About Paradise Uttarakhand
             <div className='Home_about flex flex-col items-center justify-center bg-zinc-200'>
                 <h1 className='text-2xl md:text-3xl py-3 mx-auto px-10'>Welcome to <span className='text-yellow-600 font-semibold'>Paradise Uttarakhand</span>
@@ -47,7 +51,7 @@ function Home() {
 
 
             {/* Banner Component */}
-            <ScrollReveal variant="fromRight" delay={0.2}>
+            <ScrollReveal variant="fromRight" delay={0.3}>
                 <Banner />
             </ScrollReveal >
 
@@ -56,6 +60,12 @@ function Home() {
                 <TopDestinations />
                 <Button onClick={handleMoreDestinationsClick} text="More Destinations" />
             </div >
+            {/* Booking Component */}
+            <div>
+                <Booking />
+            </div>
+            {/* Most Popular Tour Component */}
+            <PopularTour />
         </>
     );
 }
