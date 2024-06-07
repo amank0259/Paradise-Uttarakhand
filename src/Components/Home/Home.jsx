@@ -21,23 +21,19 @@ function Home() {
     return (
         <>
             {/* Background image */}
-            <ScrollReveal variant='fromUp' delay={0.3}>
-                <div style={{
-                    background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(${cover})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                }} className='w-full h-[80vh] flex flex-col justify-end items-start p-10'>
-                </div>
-            </ScrollReveal>
+            <div style={{
+                background: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url(${cover})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+            }} className='w-full h-[80vh] flex flex-col justify-end items-start p-10'>
+            </div>
             {/* background image content */}
-            <ScrollReveal variant='fromUp' delay={0.4}>
-                <div className='w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
-                    <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
-                    <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold mb-4'>with PARADISE UTTARAKHAND</h1>
-                    <Button text="View Tour" onClick={handleViewTourClick} />
-                </div>
-            </ScrollReveal >
+            <div className='w-[90%] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[0%] flex flex-col items-center justify-center'>
+                <h3 className='lg:text-3xl md:text-2xl text-xl font-semibold text-white'>Find Your Uttarakhand Special Tours Today</h3>
+                <h1 className='lg:text-5xl md:text-3xl text-2xl text-white font-semibold mb-4'>with PARADISE UTTARAKHAND</h1>
+                <Button text="View Tour" onClick={handleViewTourClick} />
+            </div>
             {/* About Paradise Uttarakhand
             <div className='Home_about flex flex-col items-center justify-center bg-zinc-200'>
                 <h1 className='text-2xl md:text-3xl py-3 mx-auto px-10'>Welcome to <span className='text-yellow-600 font-semibold'>Paradise Uttarakhand</span>
