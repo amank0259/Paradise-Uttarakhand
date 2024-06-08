@@ -7,7 +7,7 @@ function PopularTourCard({ data }) {
     const navigate = useNavigate();
 
     return (
-        <div className='w-full h-[80vh]'>
+        <div className='w-full'>
             <h1 className='text-center py-4 font-semibold md:text-2xl'>Explore By Fixed Departures
             </h1>
             <div className='h-full flex flex-wrap md:gap-6 justify-between'>
