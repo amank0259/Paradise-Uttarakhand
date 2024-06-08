@@ -30,7 +30,7 @@ function Banner() {
     ];
 
     return (
-        <div className="banner-carousel md:py-4 md:px-10 rounded-xl">
+        <div className="banner-carousel md:py-4 md:px-10 rounded-xl overflow-hidden">
             <Slider {...settings}>
                 {banners.map((banner, index) => (
                     <div key={index}>
