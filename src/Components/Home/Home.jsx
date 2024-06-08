@@ -4,7 +4,6 @@ import TopDestinations from './TopDestinations';
 import Banner from './Banner';
 import Button from '../UI/Button';
 import { useNavigate } from 'react-router-dom';
-import ScrollReveal from '../UI/ScrollReveal';
 import Booking from './Booking';
 import PopularTour from './PopularTour';
 
@@ -47,10 +46,7 @@ function Home() {
 
 
             {/* Banner Component */}
-            <ScrollReveal variant="fromRight" delay={0.3}>
-                <Banner />
-            </ScrollReveal >
-
+            <Banner />
             {/* Top Destinations Card */}
             < div className='flex items-center justify-center flex-col' >
                 <TopDestinations />
