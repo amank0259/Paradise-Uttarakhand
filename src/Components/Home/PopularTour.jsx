@@ -2,6 +2,7 @@ import React from 'react';
 import PopularTourCard from './PopularTourCard';
 import haridwar from '/haridwar.jpg';
 import rishikesh from '/rishikesh.jpg';
+import ScrollReveal from '../UI/ScrollReveal';
 
 function PopularTour() {
 
@@ -11,28 +12,48 @@ function PopularTour() {
             name: 'Nainital with Jim Corbet from Delhi',
             Img: haridwar,
             details: '4 days & 3 nights',
-            price: '₹19,500'
+            price: '₹19,500',
+            link: 'nainital'
         },
         {
             id: 1,
-            name: 'Rishikesh',
+            name: 'Delhi to Haridwar, Rishikesh & Mussoorie',
             Img: rishikesh,
-            details: 'lorem12 vkjnso ksjnvion kjsbvon jl, sjvbh hkb ihsbkx .',
-            price: '1300'
+            details: '4 days & 3 nights',
+            price: '₹19,500',
+            link: 'mussoorie'
         },
         {
-            id: 0,
-            name: 'Haridwar',
+            id: 2,
+            name: 'Auli Nainital Corbet Mussoorie',
             Img: haridwar,
-            details: 'lorem12 vkjnso ksjnvion kjsbvon jl, sjvbh hkb ihsbkx .',
-            price: '1200'
+            details: '7 days & 6 nights',
+            price: '₹35,500',
+            link: 'auli'
         },
         {
-            id: 0,
-            name: 'Haridwar',
+            id: 3,
+            name: 'Chardham Yatra from Haridwar',
             Img: haridwar,
-            details: 'lorem12 vkjnso ksjnvion kjsbvon jl, sjvbh hkb ihsbkx .',
-            price: '1200'
+            details: '10 days & 9 nights',
+            price: '₹38,300',
+            link: 'chardham'
+        },
+        {
+            id: 4,
+            name: 'Do dham Yatra from Haridwar',
+            Img: haridwar,
+            details: '6 days & 5 nights',
+            price: '₹32,500',
+            link: 'dodham'
+        },
+        {
+            id: 5,
+            name: 'Kedarnath Yatra from Haridwar',
+            Img: haridwar,
+            details: '5 days & 4 nights',
+            price: '₹24,500',
+            link: 'kedarnath'
         },
 
     ]
@@ -40,8 +61,12 @@ function PopularTour() {
     return (
         <>
             <div className='px-10 md:px-48 lg:px-64 py-4 md:py-8'>
-                <h1 className='text-3xl sm:text-4xl md:text-6xl font-semibold sm:font-semibold text-yellow-500'>Most Popular Tour --</h1>
-                <PopularTourCard data={data} />
+                <ScrollReveal variant='fromUp' delay={0.3}>
+                    <h1 className='text-3xl sm:text-4xl md:text-6xl font-semibold sm:font-semibold text-yellow-500'>Most Popular Tour --</h1>
+                </ScrollReveal>
+                <ScrollReveal variant='fromLeft' delay={0.3} >
+                    <PopularTourCard data={data} />
+                </ScrollReveal>
             </div>
         </>
     )
