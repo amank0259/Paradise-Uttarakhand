@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function TopDestinationCard({ data }) {
     const [badrinathName, badrinathImg, kedarnathName, kedarnathImg, auliName, auliImg, gangotriName, gangotriImg, mussoorieName, mussoorieImg, choptaName, choptaImg] = data.split('|');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
 
     return (
         <div>
             {/* Image Gallery */}
             <div className="py-2 flex-col w-full md:flex-row lg:pt-10">
                 <div className="-m-1 flex flex-col md:flex-row w-full flex-wrap md:-m-2">
-                    <div className="flex md:w-1/2 flex-wrap">
+                    <div data-aos="fade-right" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" className="flex md:w-1/2 flex-wrap">
                         <div onClick={() => navigate(`/destinations/${badrinathName}`)} className="w-full sm:w-1/2 p-1 md:p-2 relative h-[40vh]">
                             <LazyLoadImage
                                 alt={badrinathName}
@@ -35,7 +40,7 @@ function TopDestinationCard({ data }) {
                             <span className='text-lg absolute top-6 right-6 bg-yellow-500 text-white duration-300 hover:text-yellow-500 hover:bg-white cursor-pointer rounded py-1 px-2' >{auliName}</span>
                         </div>
                     </div>
-                    <div className="flex md:w-1/2 flex-wrap">
+                    <div data-aos="fade-left" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" className="flex md:w-1/2 flex-wrap">
                         <div onClick={() => navigate(`/destinations/${auliName}`)} className="w-full p-1 relative md:p-2">
                             <LazyLoadImage
                                 alt={gangotriName}

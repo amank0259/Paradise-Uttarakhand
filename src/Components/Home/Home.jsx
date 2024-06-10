@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cover from '/cover1.jpg'
 import TopDestinations from './TopDestinations';
 import Banner from './Banner';
@@ -6,9 +6,17 @@ import Button from '../UI/Button';
 import { useNavigate } from 'react-router-dom';
 import Booking from './Booking';
 import PopularTour from './PopularTour';
+import Review from './Review';
+import FooterTop from './FooterTop';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function Home() {
     const navigate = useNavigate();
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
 
     const handleMoreDestinationsClick = () => {
         navigate('/destinations');
@@ -43,21 +51,21 @@ function Home() {
 
                 <p className='px-10 md:px-48 py-2 leading-6 tracking-wide text-lg md:block hidden'>Uttarakhand is north indian state of India. Previously part of Uttarpradesh. In year 2000 it became the 27the state of India. Uttarakhand state has 13 districts and divided in two divisions known as Garhwal and Kumaoun. Garhwali and Kumaouni is also two major local languages in Uttarakhand areas after Hindi. It has population of more than 10 mln and area of more than 50,000 square kms. Tourism and Agriculture is biggest industries in Uttarakhand. Dehradun is capital of Uttarakhand state and also major Airport in the state. Religious Tourism is biggest tourism in the state with many ancient hindu temples are located in the state. Haridwar, Mussoorie, Nainital, Chardham, Corbett, Rishikesh etc are some of the leading tourist destinations among the 50 + other destinations for tourist. Uttarakhand has some of the highest mountains peak of Indian Himalayas and famous rivers like Yamuna and Ganga starts here.</p>
             </div> */}
-
-
             {/* Banner Component */}
             <Banner />
             {/* Top Destinations Card */}
             < div className='flex items-center justify-center flex-col' >
                 <TopDestinations />
-                <Button onClick={handleMoreDestinationsClick} text="More Destinations" />
+                <Button data-aos="fade-left" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" onClick={handleMoreDestinationsClick} text="More Destinations" />
             </div >
             {/* Booking Component */}
-            <div>
-                <Booking />
-            </div>
+            <Booking />
             {/* Most Popular Tour Component */}
             <PopularTour />
+            {/* Review Component */}
+            <Review />
+            {/*Footer top */}
+            <FooterTop />
         </>
     );
 }

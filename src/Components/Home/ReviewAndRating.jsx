@@ -2,6 +2,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import reviewData from './reviewdata.js';
 import { FaStar } from 'react-icons/fa';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 const StarRating = ({ rate }) => {
     return (
@@ -49,6 +51,10 @@ const ReviewAndRating = () => {
         }
     };
 
+    useEffect(() => {
+        Aos.init();
+    }, []);
+
     return (
         <div className="relative py-8">
             <button
@@ -65,7 +71,7 @@ const ReviewAndRating = () => {
             </button>
             <div ref={scrollContainerRef} className="flex space-x-8 overflow-x-auto scrollbar-hide">
                 {reviews.map((review, index) => (
-                    <div key={index} className="bg-slate-200 shadow-md rounded-lg p-4 min-w-[300px]">
+                    <div data-aos="zoom-in" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" key={index} className="bg-slate-200 shadow-md rounded-lg p-4 min-w-[300px]">
                         <div className="flex items-center space-x-4">
                             <div className="w-12 h-12 rounded-full bg-gray-300 flex-shrink-0">
                                 <img src="" alt="" />

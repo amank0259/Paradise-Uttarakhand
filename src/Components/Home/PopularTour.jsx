@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PopularTourCard from './PopularTourCard';
 import rishikesh from '/rishikesh.jpg';
-import ScrollReveal from '../UI/ScrollReveal';
 import nainital from '/nainital.jpg';
 import auli from '/auli2.jpg';
 import chardham from '/kedarnath2.jpg';
 import dodham from '/dodham.jpg';
 import kedarnath from '/kedarnath3.jpg'
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function PopularTour() {
+
+    useEffect(() => {
+        Aos.init();
+    }, []);
 
     const data = [
         {
@@ -65,12 +70,8 @@ function PopularTour() {
     return (
         <>
             <div className='px-10 md:px-48 lg:px-64 py-4 md:py-8'>
-                <ScrollReveal variant='fromUp' delay={0.3}>
-                    <h1 className='text-3xl sm:text-4xl md:text-6xl font-semibold sm:font-semibold text-yellow-500'>Most Popular Tour --</h1>
-                </ScrollReveal>
-                <ScrollReveal variant='fromLeft' delay={0.3} >
-                    <PopularTourCard data={data} />
-                </ScrollReveal>
+                <h1 data-aos="fade-down" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" className='text-3xl sm:text-4xl md:text-6xl font-semibold sm:font-semibold text-yellow-500'>Most Popular Tour --</h1>
+                <PopularTourCard data={data} />
             </div>
         </>
     )
