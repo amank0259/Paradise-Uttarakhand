@@ -18,7 +18,7 @@ function FooterTop() {
     }, []);
 
     return (
-        <div className='my-8 w-full'>
+        <div className='my-8 px-10'>
             <div data-aos="fade-down" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100">
                 <h1 className="text-center text-[32px] text-yellow-500 font-bold tracking-wider leading-8">Where Happiness Finds a Voice</h1>
             </div>
@@ -69,16 +69,14 @@ function FooterTop() {
                     </div>
                 </div>
                 <div data-aos="fade-left" data-aos-offset="200" data-aos-duration='500' data-aos-delay="100" className='flex-1'>
-                    <a href="https://www.instagram.com/parad_iseuttarakhand/">
-                        <video width="460" height="440" controls preload className="h-[30vh] sm:w-[80vw] sm:mt-4">
-                            <source src="/video1.mp4" type="video/mp4" />
-                            <track src="/video.mp4" kind="subtitles" srclang="en" label="English" />
-                            Your browser does not support the video tag.
-                        </video>
-                    </a>
+                    <video width="460" height="440" controls preload className="h-[30vh] sm:w-[80vw] sm:mt-4">
+                        <source src="/video1.mp4" type="video/mp4" />
+                        <track src="/video.mp4" kind="subtitles" srclang="en" label="English" />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 export default FooterTop;
